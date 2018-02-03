@@ -1,6 +1,6 @@
 package business;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pipeline.SingleFilePipeline;
@@ -97,12 +97,13 @@ public class ZipCodePageProcessor implements PageProcessor {
         return site;
     }
 
-    public static void main(String[] args) {
+    public static String main(String args) {
         Spider.create(new ZipCodePageProcessor())
                 .addUrl("http://www.ip138.com/post/")
                 .addPipeline(new SingleFilePipeline("/home/yangxvhao/webmgic/ip138.txt"))
 //                .addPipeline(new ConsolePipeline())
                 .thread(5)
                 .run();
+        return args;
     }
 }

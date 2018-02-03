@@ -6,7 +6,6 @@ package business;
 import until.UserAgentEnum;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
-import us.codecraft.webmagic.Spider;
 import us.codecraft.webmagic.processor.PageProcessor;
 
 public class GithubPge implements PageProcessor {
@@ -34,10 +33,10 @@ public class GithubPge implements PageProcessor {
         return site;
     }
 
-    public static void main(String[] args) {
-
-        String url="https://mobile.qzone.qq.com/profile?sid=&hostuin=1152042991&no_topbar=1&stat=#mine?res_uin=1152042991&ticket=";
-
-        Spider.create(new GithubPge()).addUrl(url).thread(5).run();
-    }
+//    public static void main(String[] args) {
+//
+//        String url="https://mobile.qzone.qq.com/profile?sid=&hostuin=1152042991&no_topbar=1&stat=#mine?res_uin=1152042991&ticket=";
+//
+//        Spider.create(new GithubPge()).addUrl(url).thread(5).run();
+//    }
 }

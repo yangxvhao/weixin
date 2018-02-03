@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Test20</title>
+</head>
+<body>
+<form action="#" th:action="@{/query}" th:object="${bean.MyMessage}" method="post">
+    <input type="text" th:field="*{ipStr}" />
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>

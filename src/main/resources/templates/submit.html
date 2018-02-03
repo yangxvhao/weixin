@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Test20</title>
+</head>
+<body>
+<span>输入你要查询的IP地址：</span>
+<form action="#" th:action="@{/q}"  method="POST">
+    <input type="text" th:name="message" />
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>

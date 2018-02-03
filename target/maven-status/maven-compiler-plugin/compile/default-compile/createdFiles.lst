@@ -1,3 +1,15 @@
+bean/MyMessage.class
+until/Config.class
 servlet/CoreServlet.class
+business/GetIpProcessor.class
+controller/Application.class
+pipeline/SingleFilePipeline.class
+until/UserAgentEnum.class
+until/RedisUtil.class
+service/Log4jTest.class
+servlet/Demo.class
+business/GithubPge.class
+business/ZipCodePageProcessor.class
 until/SignUtil.class
+pipeline/RedisPipeline.class
 until/Constant.class

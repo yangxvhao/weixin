@@ -20,6 +20,7 @@ public class Demo extends HttpServlet {
 //        logger.info(req.getRequestURI());
 //        resp.sendRedirect("https://www.baidu.com");
 //        resp.setHeader("12","12");
+        String ip= String.valueOf(req.getAttribute("ip"));
         resp.setContentType("text/html");
             PrintWriter out = resp.getWriter();
                  out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
@@ -27,7 +28,7 @@ public class Demo extends HttpServlet {
                  out.println("  <HEAD><TITLE>A Servlet</TITLE></HEAD>");
                 out.println("  <BODY>");
                 out.print("    This is ");
-                out.print(this.getClass());
+                out.print(ip);
                out.println(", using the GET method");
                 out.println("  </BODY>");
                 out.println("</HTML>");
