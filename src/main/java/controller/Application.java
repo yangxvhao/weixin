@@ -2,6 +2,7 @@ package controller;
 
 import business.GetIpProcessor;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.HttpRequest;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
@@ -19,7 +20,7 @@ import java.util.logging.Logger;
 @SpringBootApplication
 @Controller
 //@RestController
-//@RequestMapping("/")
+@RequestMapping("/")
 public class Application{
     Logger logger= Logger.getLogger(String.valueOf(Application.class));
 
@@ -60,10 +61,21 @@ public class Application{
         model.addAttribute("request",message);
         return "result";
     }
-    @RequestMapping("/")
-    public String index(Model model){
-        model.addAttribute("name","yang");
-        return "submit";
+    @RequestMapping()
+    public String index(){
+        String requestIp = null;
+        try {
+            requestIp = InetAddress.getLocalHost().getHostAddress();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        logger.info(requestIp);
+        return "index";
+    }
+    
+    @RequestMapping("dev")
+    public String dev(){
+        return "dev";
     }
 
     public static void main(String[] args) {
