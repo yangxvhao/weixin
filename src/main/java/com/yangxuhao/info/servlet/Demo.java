@@ -1,4 +1,4 @@
-package servlet;
+package com.yangxuhao.info.servlet;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

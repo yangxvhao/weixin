@@ -1,8 +1,8 @@
-package business;
+package com.yangxuhao.info.business;
 
 
-import pipeline.RedisPipeline;
-import until.UserAgentEnum;
+import com.yangxuhao.info.pipeline.RedisPipeline;
+import com.yangxuhao.info.until.UserAgentEnum;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.Spider;

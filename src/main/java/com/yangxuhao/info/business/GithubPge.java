@@ -1,9 +1,9 @@
-package business;
+package com.yangxuhao.info.business;
 
 /**
  * Created by yangxvhao on 17-4-25.
  */
-import until.UserAgentEnum;
+import com.yangxuhao.info.until.UserAgentEnum;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.processor.PageProcessor;

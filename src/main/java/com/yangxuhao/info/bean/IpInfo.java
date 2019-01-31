@@ -1,4 +1,4 @@
-package bean;
+package com.yangxuhao.info.bean;
 
 import lombok.Data;
 
@@ -6,6 +6,7 @@ import lombok.Data;
  * Created by yangxvhao on 17-4-28.
  */
 @Data
-public class MyMessage {
+public class IpInfo {
     private String ipStr;
+    private Integer count;
 }

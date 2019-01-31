@@ -1,4 +1,4 @@
-package service;
+package com.yangxuhao.info.service;
 
 
 import java.util.logging.Logger;

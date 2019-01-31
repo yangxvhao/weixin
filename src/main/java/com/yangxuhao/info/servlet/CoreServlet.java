@@ -1,8 +1,8 @@
-package servlet;
+package com.yangxuhao.info.servlet;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import until.SignUtil;
+import com.yangxuhao.info.until.SignUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

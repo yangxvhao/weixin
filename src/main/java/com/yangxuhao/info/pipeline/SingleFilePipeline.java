@@ -1,4 +1,4 @@
-package pipeline;
+package com.yangxuhao.info.pipeline;
 
 
 import org.slf4j.Logger;

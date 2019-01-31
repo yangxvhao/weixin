@@ -1,6 +1,6 @@
-package pipeline;
+package com.yangxuhao.info.pipeline;
 
-import until.RedisUtil;
+import com.yangxuhao.info.until.RedisUtil;
 import us.codecraft.webmagic.ResultItems;
 import us.codecraft.webmagic.Task;
 import us.codecraft.webmagic.pipeline.Pipeline;

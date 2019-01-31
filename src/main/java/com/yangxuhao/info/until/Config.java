@@ -1,4 +1,4 @@
-package until;
+package com.yangxuhao.info.until;
 
 import org.apache.commons.configuration.CompositeConfiguration;
 import org.apache.commons.configuration.Configuration;
@@ -93,13 +93,13 @@ public class Config {
             System.exit(-1);
         }
 
-        logger.info("start config file");
+        logger.info("start com.yangxuhao.info.config file");
         // Load common configuration and active configuration.
         configuration = new CompositeConfiguration();
         configuration.addConfiguration(loadConf("common"));
         configuration.addConfiguration(loadConf("strings"));
         configuration.addConfiguration(loadConf(activeConfig));
-        logger.info("end config file");
+        logger.info("end com.yangxuhao.info.config file");
     }
 
     // Loads classpath:/conf/<configName>.conf

@@ -1,10 +1,10 @@
-package business;
+package com.yangxuhao.info.business;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pipeline.SingleFilePipeline;
-import until.UserAgentEnum;
+import com.yangxuhao.info.pipeline.SingleFilePipeline;
+import com.yangxuhao.info.until.UserAgentEnum;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Request;
 import us.codecraft.webmagic.Site;

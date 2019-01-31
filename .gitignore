@@ -19,6 +19,8 @@ logs/
 hs_err_pid*
 *.conf
 *.conf.template
-business/src/main/resources/conf/redission.json
+com.yangxuhao.info.business/src/main/resources/conf/redission.json
 *.redission.json
 */.mvn/
+rebel.xml
+rebel-remote.xml

@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns:th="http://www.springframework.org/schema/mvc">
 <head>
   <meta charset="utf-8"></meta>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
   <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 
+  <link rel="icon" href="favicon.ico" type="image/x-icon"></link>
   <title>YangXuHao Page</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400"></link>  <!-- Google web font "Open Sans" -->
@@ -93,9 +94,10 @@
               </p>
             </article>
             <article class="col-xs-6 col-md-4 tm-bg-white-transparent">
-              <header><h3>更新中</h3></header>
+              <header><h3>持续更新中</h3></header>
               <p>......</p>
             </article>
+            <a href="#tm-section-5" class="btn btn-danger tm-btn-right">我要留言</a>
           </div>
         </div>
         <!--<div class="parallax-window" data-parallax="scroll" data-image-src="img/bg-img-05.jpg">-->
@@ -116,11 +118,9 @@
             <!--</div>-->
           <!--</div>-->
         <!--</div>-->
-        <div class="tlinks">Collect from <a href="http://www.cssmoban.com/" >网页模板</a></div>
-
-        <div class="parallax-window tm-position-relative tm-form-section" data-parallax="scroll" data-image-src="img/bg-img-06.jpg">
+        <div id="tm-section-5" class="parallax-window tm-position-relative tm-form-section" data-parallax="scroll" data-image-src="img/bg-img-06.jpg">
           <div class="container ">
-            <div class="row1 ">
+            <div style="display: flex;">
               <div class="col-xs-12">
                 <header><h5>留言</h5></header>
               </div>
@@ -128,7 +128,7 @@
             <div class="row tm-page-5-content">
               <div class="col-lg-4 col-md-6 col-xs-12">
                 <div class="contact_message">                  
-                  <form action="/dev" method="post" class="contact-form">
+                  <form id="form-msg" action="#tm-section-5" method="post" class="contact-form" >
                     <div class="form-group">
                       <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="姓名"  required="required"/>
                     </div>
@@ -136,26 +136,19 @@
                       <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="邮箱"  required="required"/>
                     </div>
                     <div class="form-group">
-                      <textarea id="contact_message" name="contact_message" class="form-control" rows="9" placeholder="信息" required="required"></textarea>
+                      <textarea id="contact_message" name="contact_message" class="form-control" rows="9" maxlength="100"
+                                onchange="this.value=this.value.substring(0, 100)" onkeydown="this.value=this.value.substring(0, 100)"
+                                onkeyup="this.value=this.value.substring(0, 100)" placeholder="最多输入100个字" required="required"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-danger tm-btn-submit">留言</button>
+                    <input id="msg-submit" type="button" class="btn btn-danger tm-btn-submit" onclick="checkEmpty();fullMessage();" value="留言"></input>
                   </form>
                 </div>
               </div>
-              <!--<div class="col-lg-8 col-md-6 col-xs-12">-->
-                <!--<div class="tm-address-box">-->
-                  <!--<p>如果生命不能浪费到值得的人身上，那么我宁愿浪费到自己身上。-->
-                  <!--</p>-->
-                  <!--<br/>-->
-                  <!--<address>-->
-                    <!--<b>我的地址</b><br/>-->
-                    <!--<br/>-->
-                    <!--太阳系～地球,<br/>-->
-                    <!--北半球～亚洲,<br/>-->
-                    <!--中国～北京～通州-->
-                  <!--</address>-->
-                <!--</div>-->
-              <!--</div>-->
+              <div class="col-lg-8 col-md-6 col-xs-12">
+                  <div id = "col-lg-text" class="col-me col-me-1" style=" word-break: break-all;white-space: normal;">
+
+                  </div>
+                </div>
             </div>
 
             <div class="footer">
@@ -206,9 +199,41 @@
                 });
                }
              }
+             function checkEmpty() {
+                 var name = document.getElementById("contact_name");
+                 var email = document.getElementById("contact_email");
+                 var msg = document.getElementById("contact_message");
+                 if(name.value.length === 0 || email.value.length === 0 || msg.value.length === 0){
+                     alert("输入不能为空！");
+                     return;
+                 }
+             }
+
+            function fullMessage(){
+                $.ajax({
+                    type: "POST",
+                    url: "/dev",
+                    data: $('#form-msg').serialize(),
+                    success: function (msg) {
+                        console.log(msg);
+                        if(msg==null){
+                            alert("暂无留言！")
+                        }
+                        $('#col-lg-text').html("");
+                        var html = "";
+                        for (var i = 0; i < msg.length; i++) {
+                                 html = html + "<div>" + msg[i].contactMessage + "</div>"
+                                 + "<div><div style=\"font-size: small; width: 100%;text-align:right; margin-right: 10px;\">"
+                                 + msg[i].contactName + " - " + msg[i].contactEmail
+                                 + "</div><hr style=\"height:1px;border:none;border-top:1px groove skyblue;\"></div>";
+                        }
+                        $('#col-lg-text').html(html);
+                    },
+                });
+            }
 
              $(document).ready(function(){
-
+              fullMessage();
               setCarousel();
               $('.tm-img-slider').magnificPopup({
                 delegate: 'a', // child items selector, by clicking on it popup will open

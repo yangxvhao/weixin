@@ -1,4 +1,4 @@
-package until;
+package com.yangxuhao.info.until;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
