@@ -9,4 +9,10 @@ public class Constant {
     public static final String SPLIT_FLAG = ",";
 
     public static final int SPLIT_LENGTH = 3;
+
+    public static final String JAR = ".jar";
+
+    public static final String PATH_SEPARATOR = "path.separator";
+
+    public static final String USER_DIR = "user.dir";
 }

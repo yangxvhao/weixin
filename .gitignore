@@ -6,7 +6,7 @@ bin/
 *.iml
 logs/
 */logs
-*/target
+*/target/*
 *.log
 *.class
 # Mobile Tools for Java (J2ME)
