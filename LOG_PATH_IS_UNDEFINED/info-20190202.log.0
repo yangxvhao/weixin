@@ -1,0 +1,78 @@
+2019-02-02 15:13:00.869 [main] INFO  com.yangxuhao.info.Application -Starting Application on LP-BJ000276 with PID 20828 (C:\Users\yangxuhao\IdeaProjects\weixin\target\classes started by yangxuhao in C:\Users\yangxuhao\IdeaProjects\weixin)
+2019-02-02 15:13:00.875 [main] INFO  com.yangxuhao.info.Application -No active profile set, falling back to default profiles: default
+2019-02-02 15:13:01.086 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@13a5bf6: startup date [Sat Feb 02 15:13:01 CST 2019]; root of context hierarchy
+2019-02-02 15:13:02.097 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat initialized with port(s): 8080 (http)
+2019-02-02 15:13:02.110 [main] INFO  o.a.catalina.core.StandardService -Starting service Tomcat
+2019-02-02 15:13:02.112 [main] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/8.5.6
+2019-02-02 15:13:02.476 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner -At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-02-02 15:13:02.480 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2019-02-02 15:13:02.480 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 1394 ms
+2019-02-02 15:13:02.602 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-02 15:13:02.606 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-02 15:13:02.606 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-02 15:13:02.606 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-02 15:13:02.606 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-02 15:13:02.804 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@13a5bf6: startup date [Sat Feb 02 15:13:01 CST 2019]; root of context hierarchy
+2019-02-02 15:13:02.847 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[]}" onto public java.lang.String com.yangxuhao.info.controller.IndexController.index(javax.servlet.http.HttpServletRequest)
+2019-02-02 15:13:02.847 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/health]}" onto public java.lang.String com.yangxuhao.info.controller.IndexController.health()
+2019-02-02 15:13:02.848 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/query/{ip}],methods=[GET]}" onto public java.lang.String com.yangxuhao.info.controller.Ip138Controller.getIp(java.lang.String)
+2019-02-02 15:13:02.848 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/q],methods=[POST]}" onto public java.lang.String com.yangxuhao.info.controller.Ip138Controller.getIp(java.lang.String,org.springframework.ui.Model)
+2019-02-02 15:13:02.850 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/dev],methods=[POST]}" onto public java.util.List<com.yangxuhao.info.bean.Message> com.yangxuhao.info.controller.MessageController.dev(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-02-02 15:13:02.851 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-02 15:13:02.851 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-02 15:13:02.871 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-02 15:13:02.871 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-02 15:13:02.894 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-02 15:13:02.921 [main] WARN  o.t.templatemode.TemplateMode -[THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-02-02 15:13:03.245 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Registering beans for JMX exposure on startup
+2019-02-02 15:13:03.287 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat started on port(s): 8080 (http)
+2019-02-02 15:13:03.290 [main] INFO  com.yangxuhao.info.Application -Started Application in 2.967 seconds (JVM running for 4.013)
+2019-02-02 15:13:09.018 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-02-02 15:13:09.019 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization started
+2019-02-02 15:13:09.055 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
+2019-02-02 15:13:09.295 [http-nio-8080-exec-1] INFO  c.y.info.controller.IndexController -127.0.0.1
+2019-02-02 15:13:09.980 [http-nio-8080-exec-2] INFO  c.y.i.controller.MessageController -realIp = 127.0.0.1, name = , email = , message = 
+2019-02-02 15:13:09.981 [http-nio-8080-exec-2] INFO  c.y.info.service.MessageService -filePath:
+2019-02-02 15:13:10.008 [http-nio-8080-exec-2] INFO  c.y.info.service.MessageService -filePath:
+2019-02-02 15:13:48.178 [main] INFO  com.yangxuhao.info.Application -Starting Application on LP-BJ000276 with PID 7428 (C:\Users\yangxuhao\IdeaProjects\weixin\target\classes started by yangxuhao in C:\Users\yangxuhao\IdeaProjects\weixin)
+2019-02-02 15:13:48.180 [main] INFO  com.yangxuhao.info.Application -No active profile set, falling back to default profiles: default
+2019-02-02 15:13:48.372 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@13a5bf6: startup date [Sat Feb 02 15:13:48 CST 2019]; root of context hierarchy
+2019-02-02 15:13:49.213 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat initialized with port(s): 8080 (http)
+2019-02-02 15:13:49.220 [main] INFO  o.a.catalina.core.StandardService -Starting service Tomcat
+2019-02-02 15:13:49.221 [main] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/8.5.6
+2019-02-02 15:13:49.514 [localhost-startStop-1] INFO  org.apache.jasper.servlet.TldScanner -At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-02-02 15:13:49.517 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2019-02-02 15:13:49.517 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 1145 ms
+2019-02-02 15:13:49.637 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'dispatcherServlet' to [/]
+2019-02-02 15:13:49.640 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-02-02 15:13:49.641 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-02-02 15:13:49.641 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-02-02 15:13:49.641 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'requestContextFilter' to: [/*]
+2019-02-02 15:13:49.822 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@13a5bf6: startup date [Sat Feb 02 15:13:48 CST 2019]; root of context hierarchy
+2019-02-02 15:13:49.860 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[]}" onto public java.lang.String com.yangxuhao.info.controller.IndexController.index(javax.servlet.http.HttpServletRequest)
+2019-02-02 15:13:49.861 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/health]}" onto public java.lang.String com.yangxuhao.info.controller.IndexController.health()
+2019-02-02 15:13:49.862 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/query/{ip}],methods=[GET]}" onto public java.lang.String com.yangxuhao.info.controller.Ip138Controller.getIp(java.lang.String)
+2019-02-02 15:13:49.862 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/q],methods=[POST]}" onto public java.lang.String com.yangxuhao.info.controller.Ip138Controller.getIp(java.lang.String,org.springframework.ui.Model)
+2019-02-02 15:13:49.863 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/dev],methods=[POST]}" onto public java.util.List<com.yangxuhao.info.bean.Message> com.yangxuhao.info.controller.MessageController.dev(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-02-02 15:13:49.865 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-02 15:13:49.865 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-02 15:13:49.885 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-02 15:13:49.885 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-02 15:13:49.907 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-02 15:13:49.934 [main] WARN  o.t.templatemode.TemplateMode -[THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-02-02 15:13:50.192 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Registering beans for JMX exposure on startup
+2019-02-02 15:13:50.231 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat started on port(s): 8080 (http)
+2019-02-02 15:13:50.234 [main] INFO  com.yangxuhao.info.Application -Started Application in 2.473 seconds (JVM running for 3.311)
+2019-02-02 15:13:52.908 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-02-02 15:13:52.909 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization started
+2019-02-02 15:13:52.935 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2019-02-02 15:13:53.000 [http-nio-8080-exec-1] INFO  c.y.info.controller.IndexController -127.0.0.1
+2019-02-02 15:13:54.011 [http-nio-8080-exec-2] INFO  c.y.i.controller.MessageController -realIp = 127.0.0.1, name = , email = , message = 
+2019-02-02 15:13:54.013 [http-nio-8080-exec-2] INFO  c.y.info.service.MessageService -filePath:
+2019-02-02 15:13:54.037 [http-nio-8080-exec-2] INFO  c.y.info.service.MessageService -filePath:
+2019-02-02 15:14:05.842 [http-nio-8080-exec-6] INFO  c.y.i.controller.MessageController -realIp = 127.0.0.1, name = , email = ff, message = ff
+2019-02-02 15:14:05.843 [http-nio-8080-exec-6] INFO  c.y.info.service.MessageService -filePath:
+2019-02-02 15:14:05.845 [http-nio-8080-exec-6] INFO  c.y.info.service.MessageService -filePath:
+2019-02-02 15:14:16.614 [http-nio-8080-exec-7] INFO  c.y.i.controller.MessageController -realIp = 127.0.0.1, name = , email = ff, message = ff
+2019-02-02 15:14:16.615 [http-nio-8080-exec-7] INFO  c.y.info.service.MessageService -filePath:
+2019-02-02 15:14:16.616 [http-nio-8080-exec-7] INFO  c.y.info.service.MessageService -filePath:

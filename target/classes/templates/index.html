@@ -260,17 +260,17 @@
     $(document).ready(function () {
         getAge();
         fullMessage();
-        // setCarousel();
-        // $('.tm-img-slider').magnificPopup({
-        //   delegate: 'a', // child items selector, by clicking on it popup will open
-        //   type: 'image'
-        //   // other options
-        //
-        // });
+        setCarousel();
+        $('.tm-img-slider').magnificPopup({
+          delegate: 'a', // child items selector, by clicking on it popup will open
+          type: 'image'
+          // other options
 
-        // $(window).resize(function() {
-        // setCarousel();
-        // });
+        });
+
+        $(window).resize(function() {
+        setCarousel();
+        });
     });
 
 </script>

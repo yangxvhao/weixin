@@ -97,7 +97,7 @@
             <header><h3>持续更新中</h3></header>
             <p>......</p>
         </article>
-        <a href="#tm-section-5" class="btn btn-danger tm-btn-right">我要留言</a>
+        <!--<a href="#tm-section-5" class="btn btn-danger tm-btn-right">我要留言</a>-->
     </div>
 </div>
 <!--<div class="parallax-window" data-parallax="scroll" data-image-src="img/bg-img-05.jpg">-->
@@ -121,43 +121,43 @@
 <div id="tm-section-5" class="parallax-window tm-position-relative tm-form-section" data-parallax="scroll"
      data-image-src="img/bg-img-06.jpg">
     <div class="container ">
-        <div style="display: flex;">
-            <div class="col-xs-12">
-                <header><h5>留言</h5></header>
-            </div>
-        </div>
-        <div class="row tm-page-5-content">
-            <div class="col-lg-4 col-md-6 col-xs-12">
-                <div class="contact_message">
-                    <form id="form-msg" action="#tm-section-5" method="post" class="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="contact_name" name="contact_name" class="form-control"
-                                   placeholder="姓名" required="required"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="contact_email" name="contact_email" class="form-control"
-                                   placeholder="邮箱" required="required"/>
-                        </div>
-                        <div class="form-group">
-                      <textarea id="contact_message" name="contact_message" class="form-control" rows="9"
-                                maxlength="100"
-                                onchange="this.value=this.value.substring(0, 100)"
-                                onkeydown="this.value=this.value.substring(0, 100)"
-                                onkeyup="this.value=this.value.substring(0, 100)" placeholder="最多输入100个字"
-                                required="required"></textarea>
-                        </div>
-                        <input id="msg-submit" type="button" class="btn btn-danger tm-btn-submit"
-                               onclick="checkEmpty();fullMessage();" value="留言"></input>
-                    </form>
-                </div>
-            </div>
-            <div class="col-lg-8 col-md-6 col-xs-12">
-                <div id="col-lg-text" class="col-me col-me-1"
-                     style="color: #20c997; word-break: break-all;white-space: normal;">
+        <!--<div style="display: flex;">-->
+            <!--<div class="col-xs-12">-->
+                <!--<header><h5>留言</h5></header>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row tm-page-5-content">-->
+            <!--<div class="col-lg-4 col-md-6 col-xs-12">-->
+                <!--<div class="contact_message">-->
+                    <!--<form id="form-msg" action="#tm-section-5" method="post" class="contact-form">-->
+                        <!--<div class="form-group">-->
+                            <!--<input type="text" id="contact_name" name="contact_name" class="form-control"-->
+                                   <!--placeholder="姓名" required="required"/>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<input type="email" id="contact_email" name="contact_email" class="form-control"-->
+                                   <!--placeholder="邮箱" required="required"/>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                      <!--<textarea id="contact_message" name="contact_message" class="form-control" rows="9"-->
+                                <!--maxlength="100"-->
+                                <!--onchange="this.value=this.value.substring(0, 100)"-->
+                                <!--onkeydown="this.value=this.value.substring(0, 100)"-->
+                                <!--onkeyup="this.value=this.value.substring(0, 100)" placeholder="最多输入100个字"-->
+                                <!--required="required"></textarea>-->
+                        <!--</div>-->
+                        <!--<input id="msg-submit" type="button" class="btn btn-danger tm-btn-submit"-->
+                               <!--onclick="checkEmpty();fullMessage();" value="留言"></input>-->
+                    <!--</form>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-8 col-md-6 col-xs-12">-->
+                <!--<div id="col-lg-text" class="col-me col-me-1"-->
+                     <!--style="color: #20c997; word-break: break-all;white-space: normal;">-->
 
-                </div>
-            </div>
-        </div>
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
 
         <div class="footer">
             <p>Copyright © 2018 <a href="#top">YANGXUHAO</a>
@@ -260,17 +260,17 @@
     $(document).ready(function () {
         getAge();
         fullMessage();
-        // setCarousel();
-        // $('.tm-img-slider').magnificPopup({
-        //   delegate: 'a', // child items selector, by clicking on it popup will open
-        //   type: 'image'
-        //   // other options
-        //
-        // });
+        setCarousel();
+        $('.tm-img-slider').magnificPopup({
+          delegate: 'a', // child items selector, by clicking on it popup will open
+          type: 'image'
+          // other options
 
-        // $(window).resize(function() {
-        // setCarousel();
-        // });
+        });
+
+        $(window).resize(function() {
+        setCarousel();
+        });
     });
 
 </script>
